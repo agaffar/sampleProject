@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <script type="text/javascript" src="validation.js"></script>
+    <link rel="stylesheet" href="styling.css" type="text/css">
     <title>Organizo</title>
 </head>
 <body>
-<p>hello welcome to Organizo webstorm</p>
+<p align="center">hello welcome to Organizo webstorm</p>
 <div align="center">
-    <form name="myform" onsubmit="validation()">
+    <form name="myform" onsubmit="return validation()">
         fullname<input type="text" name="fname" placeholder="fullname" onblur="return validate();"/><br>
         <span id="ful"></span><br>
-        age <input type="text" name="age" onblur='agevalidate()'><br>
-        <span id="agVal"></span>
+        age <input type="text" name="age" onblur='agevalidate()'><br><br>
+        <span id="agVal"></span><br>
+        <input type="submit" value="Check elgibility">
     </form>
 </div>
 
