@@ -2,9 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <script type="text/javascript" src="validation.js"></script>
+    <title>Organizo</title>
 </head>
 <body>
-<p>hello welcome to webstorm</p>
+<p>hello welcome to Organizo webstorm</p>
+<div align="center">
+    <form name="myform" onsubmit="validation()">
+        fullname<input type="text" name="fname" placeholder="fullname" onblur="return validate();"/><br>
+        <span id="ful"></span><br>
+        age <input type="text" name="age" onblur='agevalidate()'><br>
+        <span id="agVal"></span>
+    </form>
+</div>
+
 </body>
 </html>
