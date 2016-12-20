@@ -3,29 +3,24 @@
  */
 function validation(){
     var val1 = document.myform.fname;
-    var val2 = document.myform.age;
+    var val2 = document.myform.pwd;
     if(val1.value == "" )
     {
         alert("hello");
         document.getElementById('ful').innerHTML = '<font color="red">enter the name</p>';
     }
-    else
-    {
-        alert("not null");
-
-        document.getElementById('ful').innerHTML = '<font color="green">valid</p>';
-
-    }
-
-    if((val2.value == "") || (val2.value <= 18) )
+    if(val2.value == "" )
     {
         document.getElementById("agVal").innerHTML = "<font color='red'>your not elgible for the operation</p>";
     }
     else
     {
-        document.getElementById("agVal").innerHTML = "<font color='green'>your elgible for the operation</p>";
 
+        alert("password   "+val2);
+        document.getElementById("agVal").innerHTML = "<font color='green'>your elgible for the operation</p>";
+        window.location.href = "registrationPage.html";
     }
+    return false;
 }
 function validate()
 {
@@ -43,11 +38,12 @@ function validate()
         document.getElementById('ful').innerHTML = '<font color="green">valid</p>';
 
     }
+    return false;
 }
 function agevalidate(){
-    var val2 = document.myform.age;
+    var val2 = document.myform.pwd;
 
-    if((val2.value == "") || (val2.value <= 18) )
+    if(val2.value == "" )
     {
         document.getElementById("agVal").innerHTML = "<font color='red'>your not elgible for the operation</p>";
     }
@@ -56,4 +52,6 @@ function agevalidate(){
         document.getElementById("agVal").innerHTML = "<font color='green'>your elgible for the operation</p>";
 
     }
+    return false;
+
 }
